@@ -18,9 +18,7 @@ namespace ExtMethods
 
         public static string ToHex(this string input)
         {
-            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
-            
-            return inputBytes.ToHex();
+            return input.ToByteArray().ToHex();
         }
     }
 }

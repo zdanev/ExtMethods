@@ -16,5 +16,10 @@ namespace ExtMethods
         {
             return s.Substring(s.Length - n, n);
         }
+
+        public static byte[] ToByteArray(this string s)
+        {
+            return System.Text.Encoding.ASCII.GetBytes(s);            
+        }
     }
 }

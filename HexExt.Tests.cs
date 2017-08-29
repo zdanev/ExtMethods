@@ -1,8 +1,8 @@
 using Xunit;
 
-namespace ExtMethods
+namespace ExtMethods.Tests
 {
-    public class HexExt_Tests
+    public class HexExtTests
     {
         [Fact]
         public void Str_ToHex()

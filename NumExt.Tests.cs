@@ -1,9 +1,9 @@
 using System;
 using Xunit;
 
-namespace ExtMethods
+namespace ExtMethods.Tests
 {
-    public class NumExt_Tests
+    public class NumExtTests
     {
         [Fact]
         public void Num_PercentOf()

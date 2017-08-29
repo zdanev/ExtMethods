@@ -1,9 +1,9 @@
 using System;
 using Xunit;
 
-namespace ExtMethods
+namespace ExtMethods.Tests
 {
-    public class StrExt_Tests
+    public class StrExtTests
     {
         [Fact]
         public void String_FormatWith()

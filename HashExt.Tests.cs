@@ -1,8 +1,8 @@
 using Xunit;
 
-namespace ExtMethods
+namespace ExtMethods.Tests
 {
-    public class HashExt_Tests
+    public class HashExtTests
     {
         [Fact]
         public void Hash_CalcMD5()

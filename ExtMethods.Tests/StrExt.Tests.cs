@@ -40,5 +40,57 @@ namespace ExtMethods.Tests
             // assert
             Assert.Equal("abc", result);
         }
+
+        [Fact]
+        public void String_ToTitleCase()
+        {
+            // arrange 
+            var s = "title case test";
+
+            // act
+            var result = s.ToTitleCase();
+
+            // assert
+            Assert.Equal("Title Case Test", result);
+        }
+
+        [Fact]
+        public void String_ToPascalCase()
+        {
+            // arrange 
+            var s = "pascal case test";
+
+            // act
+            var result = s.ToPascalCase();
+
+            // assert
+            Assert.Equal("PascalCaseTest", result);
+        }
+
+        [Fact]
+        public void String_ToCamelCase()
+        {
+            // arrange 
+            var s = "camel case test";
+
+            // act
+            var result = s.ToCamelCase();
+
+            // assert
+            Assert.Equal("camelCaseTest", result);
+        }
+
+        [Fact]
+        public void String_ToKabobCase()
+        {
+            // arrange 
+            var s = "kabob case test";
+
+            // act
+            var result = s.ToKabobCase();
+
+            // assert
+            Assert.Equal("kabob-case-test", result);
+        }
     }
 }

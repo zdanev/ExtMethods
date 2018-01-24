@@ -9,6 +9,19 @@ namespace ExtMethods
             return string.Format(format, args);
         }
 
+        public static string FormatFrom(this string format, object o)
+        {
+            var result = format;
+            
+            var dict = o.ToDictionary();
+            foreach (var key in dict.Keys)
+            {
+                result = result.Replace("{" + key + "}", dict[key].ToString());
+            }
+
+            return result;
+        }
+
         public static string Left(this string s, int n)
         {
             return s.Substring(0, n);

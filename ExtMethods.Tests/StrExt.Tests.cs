@@ -92,5 +92,18 @@ namespace ExtMethods.Tests
             // assert
             Assert.Equal("kabob-case-test", result);
         }
+
+        [Fact]
+        public void String_FormatFrom()
+        {
+            // arrange
+            var model = new { FirstName = "John", LastName = "Smith", Age = 25 };
+
+            // act
+            var result = "{FirstName} {LastName} is {Age} years old.".FormatFrom(model);
+
+            // assert
+            Assert.Equal("John Smith is 25 years old.", result);
+        }
     }
 }

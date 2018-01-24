@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace ExtMethods
 {
     public static class ReflectionExt
@@ -18,6 +20,20 @@ namespace ExtMethods
             mi.Invoke(o, args);
 
             return o;
+        }
+
+        public static Dictionary<string, object> ToDictionary(this object o)
+        {
+            var dict = new Dictionary<string, object>();
+            
+            var type = o.GetType();
+            foreach (var pi in type.GetProperties())
+            {
+                var value = pi.GetValue(o);
+                dict.Add(pi.Name, value);
+            }
+
+            return dict;
         }
     }
 }
